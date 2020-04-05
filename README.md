@@ -10,7 +10,7 @@
 [![npm](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rexhang/xiyong_core/blob/master/LICENSE)
 
 ### 项目介绍
-[create-react-project]脚手架系统的开发
+[create-react-project]脚手架系统
 
 ### 使用说明
 ``` javascript

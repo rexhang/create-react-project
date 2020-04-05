@@ -7,7 +7,7 @@
 ![npm](https://img.shields.io/badge/npm_version->=5.6.0-green.svg?style=plastic)
 
 ### 开源协议
-[![npm](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rexhang/xiyong_core/blob/master/LICENSE)
+[![npm](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rexhang/create-react-project/blob/master/LICENSE)
 
 ### 项目介绍
 [create-react-project]脚手架系统

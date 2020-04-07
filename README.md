@@ -1,5 +1,5 @@
 # create-react-project
-[create-react-project]是用于搭建react项目的脚手架。集成了Webpack(4+)、AntDesign(4+)、Typescript等，让新手能够更加容易上手，减低入门的门槛，开箱即用。
+[create-react-project] 是用于搭建react项目的脚手架。集成了Webpack(4+)、AntDesign(4+)、Typescript等，让新手能够更加容易上手，减低入门的门槛，开箱即用。
 
 ### 基础运行环境
 ![node](https://img.shields.io/badge/node_version->=9.10.0-green.svg?style=plastic)
@@ -10,7 +10,7 @@
 [![npm](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rexhang/create-react-project/blob/master/LICENSE)
 
 ### 项目介绍
-[create-react-project]脚手架系统
+[create-react-project] 脚手架系统
 
 ### 使用说明
 ``` javascript

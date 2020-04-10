@@ -12,6 +12,10 @@ if (isDev){
 	process['traceDeprecation'] = true; // 跟踪弃用api信息
 }
 
+const completeIcon = "█";
+
+const incompleteIcon = "░";
+
 module.exports = {
 	mode: isDev?'development':'production', // development || prduction 模式下会自动压缩，development模式下是不会自动进行压缩的。【这是一个必须选项】
 	stats: {
@@ -44,8 +48,8 @@ module.exports = {
 			format: `  ${isDev?'正在编译...':'正在打包...'} [:bar] ` + chalk.green.bold(':percent') + ` (${chalk.yellow.bold(':current/:total')})` + ' :msg' + ' (:elapsed seconds)',
 			clear: false,
 			width: 20,
-			complete: '█',
-			incomplete: '░'
+			complete: completeIcon,
+			incomplete: incompleteIcon
 		})
 	]
 };

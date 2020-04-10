@@ -18,7 +18,7 @@ import pkg from '../package';
 //   document.getElementById('create-react-project-app')
 // );
 
-ReactDOM.render(<App />, document.getElementById('create-react-project-app'));
+ReactDOM.render(<App/>, document.getElementById('create-react-project-app'));
 
 console.log($$('#create-react-project-app').attr('id'));
 console.log(pkg.version);

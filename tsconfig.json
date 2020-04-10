@@ -1,45 +1,47 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "module": "esnext",
-    "target": "es5",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-	"strict": true,
-	"declaration": true,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "importHelpers": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-	"paths": {
-	  "@images": ["src/common-images"]
-	}
-  },
-  "exclude": [
-	"node_modules",
-	"dist",
-	"build",
-	"scripts",
-	"webpack",
-	"start",
-	"mock"
-  ],
-  "include": [
-    "./src/"
-  ],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"module": "esnext",
+		"target": "es5",
+		"lib": [
+			"esnext",
+			"dom"
+		],
+		"strict": true,
+		"declaration": true,
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"allowJs": true,
+		"jsx": "react",
+		"moduleResolution": "node",
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noImplicitAny": true,
+		"importHelpers": true,
+		"strictNullChecks": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"noUnusedLocals": true,
+		"paths": {
+			"@images": [
+				"src/common-images"
+			]
+		}
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+		"build",
+		"scripts",
+		"webpack",
+		"start",
+		"mock"
+	],
+	"include": [
+		"./src/"
+	],
 	"compileOnSave": false,
 	"buildOnSave": false
 }

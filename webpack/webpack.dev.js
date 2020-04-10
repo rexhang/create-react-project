@@ -19,25 +19,12 @@ const merge = require("webpack-merge");
 const common = require("./webpack.common.js");     //引入公共配置
 
 const devConfig = {
-	output:{
-		filename:'[name].pkg.js',
+	output: {
+		filename: '[name].pkg.js',
 		path: path.resolve(__dirname, '../dist')
 	},
 	module: {
-		rules : [
-			/*{
-				test: /\.css$/,
-				use: [
-					'style-loader',
-					{
-						loader:'css-loader'
-					}
-				]
-			},*/
-			{
-				test: /\.scss$/,
-				use: ['style-loader','css-loader', 'sass-loader']
-			},
+		rules: [
 			{
 				test: /\.(png|jpg|gif|svg)$/,
 				use: [{
@@ -61,15 +48,15 @@ const devConfig = {
 				}]
 			},
 			{
-				test : /\.(js|jsx)$/,
-				use : {
+				test: /\.(js|jsx)$/,
+				use: {
 					loader: 'babel-loader'
 				},
-				exclude : /node_modules/
+				exclude: /node_modules/
 			},
 			{
-				test : /\.(ts|tsx)$/,
-				use : [
+				test: /\.(ts|tsx)$/,
+				use: [
 					{
 						loader: 'babel-loader',
 					},
@@ -77,20 +64,20 @@ const devConfig = {
 						loader: 'ts-loader'
 					}
 				],
-				exclude : /node_modules/
+				exclude: /node_modules/
 			},
-		
+
 		]
 	},
-	watch : false,
+	watch: false,
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: "[name].pkg.css",    // [name]为chunk名称
 		}),
 		new HtmlWebpackPlugin({
 			chunks: ['root'],
-			template:'./start/index.html',
-			filename:'index.html',
+			template: './start/index.html',
+			filename: 'index.html',
 			minify: {
 				collapseWhitespace: false,
 				minifyCSS: false,
@@ -103,14 +90,14 @@ const devConfig = {
 		new webpack.HotModuleReplacementPlugin(),
 		new CopyWebpackPlugin([{
 			from: './start',     // 将此目录下的文件缓存
-			to:'./'              // 输出到此目录，相对于output.path目录
+			to: './'              // 输出到此目录，相对于output.path目录
 		}]),
 	],
-	devServer:{
+	devServer: {
 		quiet: true,
-		progress:false,             // 启动进度条
-		compress:false,             // 启动zip压缩
-		inline:true,                //页面实时刷新
+		progress: false,             // 启动进度条
+		compress: false,             // 启动zip压缩
+		inline: true,                //页面实时刷新
 		hot: true,                 //开启模块热替换
 		contentBase: './dist',     //将dist目录下的文件，作为额外可访问文件
 		host: '127.0.0.1',           //DevServer 服务监听的地址，默认是localhost。当需要同个局域网可访问你的服务时，可设成0.0.0.0
@@ -125,9 +112,9 @@ const devConfig = {
 			ca: fs.readFileSync('/path/to/ca.pem'),
 		},*/
 		after() {
-			open(`http://${this.host||ip}:${this.port}`)
+			open(`http://${this.host || ip}:${this.port}`)
 				.then(() => {
-					console.log(chalk.cyan(`成功打开链接： http://${this.host||ip}:${this.port}`));
+					console.log(chalk.cyan(`成功打开链接： http://${this.host || ip}:${this.port}`));
 				})
 				.catch(err => {
 					console.log(chalk.red(err));

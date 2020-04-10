@@ -6,12 +6,13 @@ class Demo {
 		this.name = name;
 		this.age = age;
 	}
+
 	start() {
 		return `name: ${this.name} age ${this.age}`;
 	}
 }
 
-let demo = new Demo('rex','18');
+let demo = new Demo('rex', '18');
 
 const str = demo.start();
 console.log(str);

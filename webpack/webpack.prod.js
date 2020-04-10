@@ -10,7 +10,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"); /
 
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");  //用于压缩JS代码
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -21,25 +21,12 @@ const merge = require("webpack-merge");
 const common = require("./webpack.common.js");     //引入公共配置
 
 const prodConfig = {
-	output:{
-		filename:'[name].[chunkhash:8].pkg.js',
+	output: {
+		filename: '[name].[chunkhash:8].pkg.js',
 		path: path.resolve(__dirname, '../dist')
 	},
 	module: {
-		rules : [
-			/*{
-				test: /\.css$/,
-				use: [
-					'style-loader',
-					{
-						loader:'css-loader'
-					}
-				]
-			},*/
-			{
-				test: /\.scss$/,
-				use: ['style-loader','css-loader', 'sass-loader']
-			},
+		rules: [
 			{
 				test: /\.(png|jpg|gif|svg)$/,
 				use: [{
@@ -65,15 +52,15 @@ const prodConfig = {
 				exclude: path.resolve(__dirname, '../start/assets')
 			},
 			{
-				test : /\.(js|jsx)$/,
-				use : {
+				test: /\.(js|jsx)$/,
+				use: {
 					loader: 'babel-loader'
 				},
-				exclude : /node_modules/
+				exclude: /node_modules/
 			},
 			{
-				test : /\.(ts|tsx)$/,
-				use : [
+				test: /\.(ts|tsx)$/,
+				use: [
 					{
 						loader: 'babel-loader',
 					},
@@ -81,12 +68,12 @@ const prodConfig = {
 						loader: 'ts-loader'
 					}
 				],
-				exclude : /node_modules/
+				exclude: /node_modules/
 			},
-		
+
 		]
 	},
-	watch : false,
+	watch: false,
 	plugins: [
 		new AntdDayjsWebpackPlugin(),
 		new MiniCssExtractPlugin({
@@ -94,12 +81,12 @@ const prodConfig = {
 		}),
 		new CleanWebpackPlugin({
 			verbose: true,
-			cleanOnceBeforeBuildPatterns: [ path.resolve(__dirname, '../dist') ]
+			cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, '../dist')]
 		}),
 		new HtmlWebpackPlugin({
 			chunks: ['root', 'common', 'vendor'],
-			template:'./start/index.html',
-			filename:'index.html',
+			template: './start/index.html',
+			filename: 'index.html',
 			minify: {
 				collapseWhitespace: true,
 				minifyCSS: true,
@@ -111,7 +98,7 @@ const prodConfig = {
 		}),
 		new CopyWebpackPlugin([{
 			from: './start',  // 将此目录下的文件
-			to:'./'              // 输出到此目录，相对于output.path目录
+			to: './'              // 输出到此目录，相对于output.path目录
 		}])
 	],
 	resolve: {

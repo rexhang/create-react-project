@@ -1,35 +1,38 @@
 import * as React from "react";
 
-import { Button } from "antd";
+import {Button} from "antd";
 
-import { CloudUploadOutlined } from '@ant-design/icons';
+import {CloudUploadOutlined} from '@ant-design/icons';
 
 interface FileUploadInterface {
-	id: number;
+    id: number;
 }
 
 interface Props {
-	title: string;
-	onSuccess(file: object): void;
-	onError(file: object): void;
+    title: string;
+
+    onSuccess(file: object): void;
+
+    onError(file: object): void;
 }
 
 interface States {
-	uploading: boolean;
+    uploading: boolean;
 }
 
-export class FileUpload extends React.Component<Props, States> implements FileUploadInterface{
+export class FileUpload extends React.Component<Props, States> implements FileUploadInterface {
     id = 520;
-	state = {
-		uploading: false
-	};
-	render() {
-		const { title = '上传文件', onSuccess, onError } = this.props;
-		return (
-			<Button onClick={()=>{
-				onSuccess({name: 0});
-				onError({name: 500});
-			}} icon={<CloudUploadOutlined />}>{title}</Button>
-		)
-	}
+    state = {
+        uploading: false
+    };
+
+    render() {
+        const {title = '上传文件', onSuccess, onError} = this.props;
+        return (
+            <Button type='primary' ghost onClick={() => {
+                onSuccess({name: 0});
+                onError({name: 500});
+            }} icon={<CloudUploadOutlined/>}>{title}</Button>
+        )
+    }
 }

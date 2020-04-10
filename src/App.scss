@@ -3,60 +3,63 @@
 $rexLogoSize: 32px;
 
 .App {
-  text-align: center;
+	text-align: center;
 }
-.App-logo{
-  position: relative;
-  width: 520px;
-  height: 520px;
-  .App-logo-react {
-    width: 520px;
-    height: 520px;
-    pointer-events: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  .App-logo-rex{
-    @extend .App-logo-react;
-    border-radius: 50%;
-    width: $rexLogoSize;
-    height: $rexLogoSize;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -$rexLogoSize / 2;
-    margin-top: -$rexLogoSize / 2;
-    animation: auto !important;
-  }
+
+.App-logo {
+	position: relative;
+	width: 520px;
+	height: 520px;
+
+	.App-logo-react {
+		width: 520px;
+		height: 520px;
+		pointer-events: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.App-logo-rex {
+		@extend .App-logo-react;
+		border-radius: 50%;
+		width: $rexLogoSize;
+		height: $rexLogoSize;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -$rexLogoSize / 2;
+		margin-top: -$rexLogoSize / 2;
+		animation: auto !important;
+	}
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo-react {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo-react {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }

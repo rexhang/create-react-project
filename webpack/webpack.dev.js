@@ -72,6 +72,13 @@ const devConfig = {
 				},
 				exclude : /node_modules/
 			},
+			{
+				test : /\.(ts|tsx)$/,
+				use : {
+					loader: 'ts-loader'
+				},
+				exclude : /node_modules/
+			},
 		
 		]
 	},
@@ -128,7 +135,7 @@ const devConfig = {
 			'@c-i': path.resolve(__dirname, '../src/common-images')   //把导入语句里的 assets 关键字替换成 根目录/src/assets/
 		}
 	},
-	devtool: "#cheap-module-eval-source-map"
+	devtool: "eval-source-map"
 };
 
 module.exports = merge(common, devConfig);

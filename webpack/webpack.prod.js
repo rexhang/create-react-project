@@ -75,6 +75,14 @@ const prodConfig = {
 				},
 				exclude : /node_modules/,
 			},
+			{
+				test : /\.(ts|tsx)$/,
+				use : {
+					loader: 'ts-loader',
+					options: {},
+				},
+				exclude : /node_modules/
+			},
 		
 		]
 	},
@@ -115,6 +123,7 @@ const prodConfig = {
 			'@c-i': path.resolve(__dirname, '../src/common-images')   //把导入语句里的 assets 关键字替换成 根目录/src/assets/
 		}
 	},
+	devtool: "source-map",
 	optimization: {
 		minimize: true,
 		minimizer: [

@@ -1,23 +1,33 @@
-import React from 'react';
+import * as React from 'react';
+// @ts-ignore
 import logoRex from '@c-i/logo-rex.svg';
+// @ts-ignore
 import logoReact from '@c-i/logo-react.svg';
+
 import './App.scss';
+
 import { hot } from 'react-hot-loader/root';
 
-import {Button, ConfigProvider, DatePicker} from "antd";
+import { Button, ConfigProvider, DatePicker } from "antd";
+
+import { FileUpload } from "./upload";
 
 const { RangePicker } = DatePicker;
 
-import moment from 'moment';
+import * as moment from 'moment';
 
 import 'dayjs/locale/zh-cn';
 
 import cn from 'antd/es/locale/zh_CN';
 import en from 'antd/es/locale/en_US';
 
-class App extends React.Component {
-  
-  constructor(props) {
+class App extends React.Component<any, any> {
+
+  state = {
+
+  };
+
+  constructor(props: any) {
     super(props);
     this.state = {
       lang: cn,
@@ -48,19 +58,31 @@ class App extends React.Component {
       console.log('finally');
     }
   }
+
+  handleLists = {
+    onFileSuccess: (file: object) => {
+      console.log(file);
+    },
+    onFileError: (file: object) => {
+      console.log(file);
+    },
+    setEn: () => {
+      this.setState({
+        lang: en
+      }, ()=>{
+        console.log('设置为英文');
+      })
+    }
+  };
   
   render() {
     return (
-        <ConfigProvider locale={this.state.lang}>
+        <ConfigProvider locale={this['state']['lang']}>
           <div className="App">
             <header className="App-header">
-              <Button ghost type='primary' onClick={()=>{
-                this.setState({
-                  lang: en
-                }, ()=>{
-                  console.log('设置为英文');
-                })
-              }}>切换语言</Button>
+              <FileUpload title='文件上传' onSuccess={this.handleLists.onFileSuccess} onError={this.handleLists.onFileError} />
+              <br/>
+              <Button ghost type='primary' onClick={this.handleLists.setEn}>切换语言</Button>
               <br/>
               <RangePicker defaultValue={[moment('2015-01-01', 'YYYY-MM-DD'), moment('2018s-02-02', 'YYYY-MM-DD')]} />
               <div className='App-logo'>

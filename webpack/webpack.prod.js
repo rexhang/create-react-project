@@ -25,7 +25,6 @@ const prodConfig = {
 		filename:'[name].[chunkhash:8].pkg.js',
 		path: path.resolve(__dirname, '../dist')
 	},
-	mode: 'production', // development || prduction 模式下会自动压缩，development模式下是不会自动进行压缩的。【这是一个必须选项】
 	module: {
 		rules : [
 			/*{
@@ -68,19 +67,20 @@ const prodConfig = {
 			{
 				test : /\.(js|jsx)$/,
 				use : {
-					loader: 'babel-loader',
-					options: {
-						presets: ["@babel/preset-env", "@babel/preset-react"]
-					}
+					loader: 'babel-loader'
 				},
-				exclude : /node_modules/,
+				exclude : /node_modules/
 			},
 			{
 				test : /\.(ts|tsx)$/,
-				use : {
-					loader: 'ts-loader',
-					options: {},
-				},
+				use : [
+					{
+						loader: 'babel-loader',
+					},
+					{
+						loader: 'ts-loader'
+					}
+				],
 				exclude : /node_modules/
 			},
 		
@@ -120,7 +120,8 @@ const prodConfig = {
 		// 尽可能的减少后缀尝试的可能性 速度更快
 		extensions: [".ts", ".tsx", ".js", ".jsx", '.json'],
 		alias: {
-			'@c-i': path.resolve(__dirname, '../src/common-images')   //把导入语句里的 assets 关键字替换成 根目录/src/assets/
+			'react-dom': '@hot-loader/react-dom',
+			'@images': path.resolve(__dirname, '../src/common-images')   //把导入语句里的 assets 关键字替换成 根目录/src/assets/
 		}
 	},
 	devtool: "source-map",
@@ -149,4 +150,6 @@ const prodConfig = {
 	}
 };
 
-module.exports = merge(common, prodConfig);
+const webpackConfigs = merge(common, prodConfig);
+
+module.exports = webpackConfigs;

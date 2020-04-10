@@ -1,7 +1,7 @@
 # create-react-project
-[create-react-project] It is a scaffolding used to build react projects. Integrated Webpack (4+), AntDesign (4+), Typescript, etc., so that novices can more easily get started, lower the threshold for entry, out of the box.
+[create-react-project] It is a scaffolding used to build react projects. Integrated Webpack (4+), AntDesign (4+), Typescript(3+), etc., so that novices can more easily get started, lower the threshold for entry, out of the box.
 
-[create-react-project] 是用于搭建react项目的脚手架。集成了Webpack(4+)、AntDesign(4+)、Typescript等，让新手能够更加容易上手，减低入门的门槛，开箱即用。
+[create-react-project] 是用于搭建react项目的脚手架。集成了Webpack(4+)、AntDesign(4+)、Typescript(3+)等，让新手能够更加容易上手，减低入门的门槛，开箱即用。
 
 ### 基础运行环境
 ![node](https://img.shields.io/badge/node_version->=9.10.0-green.svg?style=plastic)
@@ -18,7 +18,7 @@
 
 ### 使用说明
 ``` javascript
- $ yarn install && yarn start
+ $ yarn install && yarn start && yarn build && cd dist && npm publish
 ````
 
 ##### Author @RexHang Create At 2020.

@@ -1,8 +1,8 @@
 import * as React from 'react';
 // @ts-ignore
-import logoRex from '@c-i/logo-rex.svg';
+import logoRex from '@images/logo-rex.svg';
 // @ts-ignore
-import logoReact from '@c-i/logo-react.svg';
+import logoReact from '@images/logo-react.svg';
 
 import './App.scss';
 
@@ -14,13 +14,13 @@ import { FileUpload } from "./upload";
 
 const { RangePicker } = DatePicker;
 
-import * as moment from 'moment';
+import moment from 'moment';
 
 import 'dayjs/locale/zh-cn';
 
 import cn from 'antd/es/locale/zh_CN';
 import en from 'antd/es/locale/en_US';
-
+console.log('3');
 class App extends React.Component<any, any> {
 
   state = {
@@ -76,6 +76,9 @@ class App extends React.Component<any, any> {
   };
   
   render() {
+    const defaultValue: any = [
+      moment('2018-01-01', 'YYYY-MM-DD'), moment('2020-03-12', 'YYYY-MM-DD')
+    ];
     return (
         <ConfigProvider locale={this['state']['lang']}>
           <div className="App">
@@ -84,7 +87,7 @@ class App extends React.Component<any, any> {
               <br/>
               <Button ghost type='primary' onClick={this.handleLists.setEn}>切换语言</Button>
               <br/>
-              <RangePicker defaultValue={[moment('2015-01-01', 'YYYY-MM-DD'), moment('2018s-02-02', 'YYYY-MM-DD')]} />
+              <RangePicker defaultValue={defaultValue} />
               <div className='App-logo'>
                 <img src={logoReact} className="App-logo-react" alt="logo-react" />
                 <img src={logoRex} className="App-logo-rex" alt="logo-rex" />

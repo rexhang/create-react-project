@@ -1,14 +1,17 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "dist",
-    "rootDir": "src",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "module": "esnext",
     "target": "es5",
     "lib": [
-      "es6",
+      "esnext",
       "dom"
     ],
+	"strict": true,
+	"declaration": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
@@ -20,18 +23,23 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+	"paths": {
+	  "@images": ["src/common-images"]
+	}
   },
   "exclude": [
     "node_modules",
     "dist",
+    "build",
     "scripts",
-    "acceptance-tests",
     "webpack",
-    "jest",
-    "src/setupTests.ts"
+	"start",
+    "mock"
   ],
   "include": [
-    "./src/**/*"
-  ]
+    "./src/"
+  ],
+	"compileOnSave": false,
+	"buildOnSave": false
 }

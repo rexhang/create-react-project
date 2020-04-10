@@ -19,7 +19,7 @@ interface States {
 }
 
 export class FileUpload extends React.Component<Props, States> implements FileUploadInterface{
-	id: 5201314;
+    id = 520;
 	state = {
 		uploading: false
 	};

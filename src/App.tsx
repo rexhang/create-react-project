@@ -93,7 +93,7 @@ class App extends React.Component<any, any> {
                 <img src={logoRex} className="App-logo-rex" alt="logo-rex" />
               </div>
               <p>
-                Edit <code>src/App.js</code> and save to reload.
+                Edit <code>src/App.tsx</code> and save to reload.
               </p>
               <a
                   className="App-link"

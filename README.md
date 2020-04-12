@@ -18,9 +18,9 @@
 
 ### 使用说明
 ``` javascript
- $ yarn install && yarn start && yarn build && yarn preview(preset: npm i -g serve) && cd dist && npm publish
+ $ yarn install && yarn start && yarn build && yarn view(preset: npm i -g serve) && cd dist && npm publish
 ````
 
 ##### Author @RexHang Create At 2020.
 
-##### Welcome To My [Website](https://rexhang.com/) and [Blog](http://www.rexhang.com/blog/).
+##### Welcome To My [Website](https://rexhang.com/) and [Blog](http://www.rexhang.com/blog/) Or Connect With My [QQ](http://wpa.qq.com/msgrd?v=3&uin=1134916452).

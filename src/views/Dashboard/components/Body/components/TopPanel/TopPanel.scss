@@ -1,0 +1,26 @@
+.App-Top-Panel{
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    .App-header{
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 64px;
+        padding: 0;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0,21,41,.08);
+        z-index: 1;
+    }
+    .App-Breadcrumb{
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 64px;
+        padding: 16px 24px;
+        background: #fff;
+    }
+}

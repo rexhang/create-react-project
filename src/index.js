@@ -1,7 +1,14 @@
+/*
+* @author RexHang(rexhang@vip.qq.com)
+* @date 2020年4月12日, 0012 16:54
+* @description 入口文件
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import './common.scss';
+import Application from "./Application";
 
 import pkg from '../package';
 
@@ -18,7 +25,6 @@ import pkg from '../package';
 //   document.getElementById('create-react-project-app')
 // );
 
-ReactDOM.render(<App/>, document.getElementById('create-react-project-app'));
+ReactDOM.render(<Application />, document.getElementById('create-react-project-app'));
 
-console.log($$('#create-react-project-app').attr('id'));
 console.log(pkg.version);

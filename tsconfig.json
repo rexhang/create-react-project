@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+        "experimentalDecorators": true,
 		"baseUrl": ".",
 		"outDir": "./dist",
 		"rootDir": "./src",
@@ -9,24 +10,24 @@
 			"esnext",
 			"dom"
 		],
-		"strict": true,
+		"strict": false,
 		"declaration": true,
 		"esModuleInterop": true,
 		"sourceMap": true,
 		"allowJs": true,
 		"jsx": "react",
 		"moduleResolution": "node",
-		"forceConsistentCasingInFileNames": true,
-		"noImplicitReturns": true,
+		"forceConsistentCasingInFileNames": false,
+		"noImplicitReturns": false,
 		"noImplicitThis": true,
 		"noImplicitAny": true,
 		"importHelpers": true,
 		"strictNullChecks": true,
 		"suppressImplicitAnyIndexErrors": true,
-		"noUnusedLocals": true,
+		"noUnusedLocals": false,
 		"paths": {
-			"@images": [
-				"src/common-images"
+			"@images/*": [
+				"./src/common-images/*"
 			]
 		}
 	},

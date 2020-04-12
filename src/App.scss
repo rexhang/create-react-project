@@ -1,25 +1,24 @@
 @import "./common.scss";
 
 $rexLogoSize: 32px;
+$reactLogoSize: 460px;
 
-.App {
+.App-React {
 	text-align: center;
 }
 
 .App-logo {
 	position: relative;
-	width: 520px;
-	height: 520px;
-
+	width: $reactLogoSize;
+	height: $reactLogoSize;
 	.App-logo-react {
-		width: 520px;
-		height: 520px;
+		width: 100%;
+		height: 100%;
 		pointer-events: none;
 		position: absolute;
 		left: 0;
 		top: 0;
 	}
-
 	.App-logo-rex {
 		@extend .App-logo-react;
 		border-radius: 50%;
@@ -41,7 +40,7 @@ $rexLogoSize: 32px;
 }
 
 .App-header {
-	background-color: #282c34;
+	background-color: #fff;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -49,6 +48,9 @@ $rexLogoSize: 32px;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
+	.learn-doc{
+		color: #333;
+	}
 }
 
 .App-link {

@@ -1,3 +1,16 @@
 body {
 	font-size: 14px;
 }
+
+.rex-cf::after{
+	content: '';
+	clear: both;
+}
+
+#root, body, html, #create-react-project-app{
+	height: 100%;
+}
+
+$theme-menu-color: #001529;
+
+$app-padding: 16px 24px;

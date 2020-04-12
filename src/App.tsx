@@ -1,14 +1,12 @@
 import * as React from 'react';
 
-// @ts-ignore
 import logoRex from '@images/logo-rex.svg';
 
-// @ts-ignore
 import logoReact from '@images/logo-react.svg';
 
-import {hot} from 'react-hot-loader/root';
+import {Button, ConfigProvider, DatePicker, Result} from "antd";
 
-import {Button, ConfigProvider, DatePicker} from "antd";
+import { SmileOutlined } from '@ant-design/icons';
 
 import {FileUpload} from "./upload";
 
@@ -22,6 +20,12 @@ import cn from 'antd/es/locale/zh_CN';
 import en from 'antd/es/locale/en_US';
 
 import './App.scss';
+
+import './App.less';
+
+import './App.styl';
+
+import {Link} from "react-router-dom";
 
 class App extends React.Component<any, any> {
 
@@ -77,22 +81,32 @@ class App extends React.Component<any, any> {
 
     render() {
         const defaultValue: any = [
-            moment('2020-04-3', 'YYYY-MM-DD'), moment()
+            moment('2020-03-12', 'YYYY-MM-DD'), moment()
         ];
         return (
             <ConfigProvider locale={this['state']['lang']}>
-                <div className="App">
+                <div className="App-React">
                     <header className="App-header">
-                        <Button ghost type='primary' onClick={this.handleLists.setEn}>切换语言</Button>
-                        <br/>
-                        <RangePicker defaultValue={defaultValue}/>
+                        <Result
+                            icon={<SmileOutlined />}
+                            title="欢迎使用本系统~"
+                            subTitle="Please go to the control panel for more features."
+                            extra={
+                                <Button type="primary" key="console">
+                                    <Link to='/dashboard'>前往控制面板</Link>
+                                </Button>
+                            }
+                        />
+                        {/*<div className='hello hi'></div>*/}
+                        {/*<div className='sy hi'></div>*/}
+                        {/*<Button ghost type='primary' onClick={this.handleLists.setEn}>切换语言</Button>*/}
+                        {/*<RangePicker defaultValue={defaultValue}/>*/}
                         <div className='App-logo'>
                             <img src={logoReact} className="App-logo-react" alt="logo-react"/>
                             <img src={logoRex} className="App-logo-rex" alt="logo-rex"/>
                         </div>
-                        <FileUpload title='开始' onSuccess={this.handleLists.onFileSuccess}
-                                    onError={this.handleLists.onFileError}/>
-                        <p>
+                        {/*<FileUpload title='开始' onSuccess={this.handleLists.onFileSuccess} onError={this.handleLists.onFileError} />*/}
+                        <p className='learn-doc'>
                             Edit <code>src/App.tsx</code> and save to reload.
                         </p>
                         <a
@@ -111,4 +125,4 @@ class App extends React.Component<any, any> {
 
 }
 
-export default hot(App);
+export default App;

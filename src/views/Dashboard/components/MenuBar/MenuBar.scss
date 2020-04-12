@@ -1,0 +1,13 @@
+@import "../../../../common";
+
+.App-Menu-Bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 262px;
+  background-color: $theme-menu-color;
+  .App-Menu{
+    width: 262px;
+  }
+}

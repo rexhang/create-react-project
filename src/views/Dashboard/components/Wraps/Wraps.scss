@@ -1,4 +1,11 @@
+@import "../../../../common";
+
 .Wraps{
+    margin: $app-padding;
+    padding: $app-padding;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(40, 120, 255, 0.11), 0 3px 8px rgba(0, 0, 0, 0.11);
     will-change: auto;
     transform: translateY(0);
     animation: load-wraps .5s 1;

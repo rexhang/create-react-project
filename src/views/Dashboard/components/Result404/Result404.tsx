@@ -4,6 +4,8 @@ import './Result404.scss';
 
 import { Result, Button } from 'antd';
 
+import { Link } from 'react-router-dom';
+
 export class Result404 extends React.Component<any, any>{
     render(): React.ReactNode {
         return (
@@ -12,7 +14,7 @@ export class Result404 extends React.Component<any, any>{
                     status="404"
                     title="404"
                     subTitle="Sorry, the page you visited does not exist."
-                    extra={<Button type="primary">Back Home</Button>}
+                    extra={<Button type="primary"><Link to='/'>Back Home</Link></Button>}
                 />
             </div>
         )

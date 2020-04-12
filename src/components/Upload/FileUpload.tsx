@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import {Button} from "antd";
+import { Button } from "antd";
 
-import {CloudUploadOutlined} from '@ant-design/icons';
+import { CloudUploadOutlined } from '@ant-design/icons';
 
 interface FileUploadInterface {
     id: number;

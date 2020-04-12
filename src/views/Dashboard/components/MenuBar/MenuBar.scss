@@ -5,9 +5,10 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 262px;
+  width: $app-menu-width;
   background-color: $theme-menu-color;
+  z-index: 1;
   .App-Menu{
-    width: 262px;
+    width: 100%;
   }
 }

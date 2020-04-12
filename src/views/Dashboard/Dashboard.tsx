@@ -29,14 +29,12 @@ export class Dashboard extends React.Component<any, any>{
                                 <Wraps>
                                     <Result
                                         status="success"
-                                        title="Welcome to the dashboard"
-                                        subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
+                                        title="欢迎来到仪表盘"
+                                        subTitle="Welcome to use react framework development."
                                         extra={
                                             [
-                                                <Button type="primary" key="console">
-                                                    Go Console
-                                                </Button>,
-                                                <Button key="buy">Buy Again</Button>
+                                                <Button type="primary" key="1">确 认</Button>,
+                                                <Button key="2">取消</Button>
                                             ]
                                         }
                                         />

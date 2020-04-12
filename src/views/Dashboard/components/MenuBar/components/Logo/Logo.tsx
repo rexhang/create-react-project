@@ -11,7 +11,7 @@ export class Logo extends React.Component<any, any>{
             <div className="rex-admin-sider-menu-logo" id="logo">
                 <a href="/">
                     <img src={logo} alt="logo" />
-                    <h1>Rex Admin System</h1>
+                    <h1>Admin System</h1>
                 </a>
             </div>
         )

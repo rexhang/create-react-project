@@ -42,6 +42,31 @@ const completeIcon = "█";
 
 const incompleteIcon = "░";
 
+const CelebrityQuotes = [
+	`只有经历过地狱般的磨砺，才能练就创造天堂的力量；只有流过血的手指，才能弹出世间的绝响。——泰戈尔`,
+	`你以为挑起生活的担子是勇气，其实去过自己真正想要的生活才更需要勇气。——萨姆门德斯`,
+	`没有目的，就做不成任何事情；目的渺小，就做不成任何大事——狄德罗`,
+	`生活就像海洋，只有意志坚强的人，才能到达彼岸。——马克思`,
+	`未曾失败的人恐怕也未曾成功过——佚名`,
+	`在这个并非尽善尽美的世界上，勤奋会得到报偿，而游手好闲则要受到惩罚——毛姆`,
+	`锲而舍之，朽木不折；锲而不舍，金石可镂。——荀子《劝学》`,
+	`有些梦想，纵使永远也没办法实现，纵使光是连说出来都很奢侈。但如果没有说出来温暖自己一下，就无法获得前进的动力。——九把刀`,
+	`人的一切痛苦，本质上都是对自己的无能的愤怒。——王小波`,
+	`只要朝着一个方向努力，一切都会变得得心应手。——勃朗宁`,
+	`乐观的人在每个危机里看到机会，悲观的人在每个机会里看见危机。——邱吉尔`,
+	`让自己的内心藏着一条巨龙，既是一种苦刑，也是一种乐趣——雨果`,
+	`心若改变，你的态度跟着改变；态度改变，你的习惯跟着改变；习惯改变，你的性格跟着改变；性格改变，你的人生跟着改变。——亚伯拉罕·马斯洛`,
+	`要随时牢记在心中：决心取得成功比任何一件事情都重要。——林肯`,
+	`人生的旅途，前途很远，也很暗，然而不要怕。不怕的人面前才有路——有岛武郎`,
+	`一花凋零，荒芜不了整个春天。——巴尔扎克`,
+	`人生活在世界上好比一只船在大海中航行，最重要的是要辨清前进的方向。——潘菽`,
+	`没有斗争就没有功绩，没有功绩就没有奖赏，而没有行动就没有生活——别林斯基`,
+	`烈火试真金，逆境试强者。——塞内加`,
+	`顽强的毅力可以征服世界上任何一座高峰！——狄更斯`,
+	`天才就是百分之一的灵感加百分之九十九的汗水。——爱迪生`,
+	`每一个不曾起舞的日子，都是对生命的辜负。——尼采`
+];
+
 let comConfig = {
 	mode: isDev ? 'development' : 'production', // development 模式下会自动压缩 development模式下是不会自动进行压缩的 --这是一个必须选项
 	stats: {
@@ -185,13 +210,16 @@ let comConfig = {
 		new FriendlyErrorsWebpackPlugin({
 			compilationSuccessInfo: {
 				messages: [`web\u7a0b\u5e8f\u8fd0\u884c\u5730\u5740\u5728: ${devBasicConfig.devServer.https ? 'https' : 'http'}://${devBasicConfig.devServer.host}:${devBasicConfig.devServer.port}`],
-				notes: [chalk.yellow('\u5feb\u4e50\u7f16\u7a0b\uff0c\u5f00\u5fc3\u6bcf\u4e00\u5929 >>> \u5982\u7a0b\u5e8f\u8fd0\u884c\u6709\u95ee\u9898\u8bf7\u8054\u7cfb@rexhang ^-^')],
+				notes: [
+					chalk.yellow(`${CelebrityQuotes[parseInt(Math.random() * 10)]}`)
+					+'\n'+chalk.blue('\u5feb\u4e50\u7f16\u7a0b\uff0c\u5f00\u5fc3\u6bcf\u4e00\u5929\uff0c\u4eca\u5929\u4e5f\u8981\u52a0\u6cb9\u5594~ >>> Ps: \u5982\u7a0b\u5e8f\u8fd0\u884c\u6709\u95ee\u9898\u8bf7\u8054\u7cfb@rexhang ^-^\n')
+				],
 			},
 			clearConsole: true,
 		}),
 		new WebpackBuildNotifierPlugin(
 			{
-				title: 'My Project Webpack Build',
+				title: 'create-react-project -> build',
 				suppressSuccess: true,
 				logo: notifierIcon,
 				showDuration: true,

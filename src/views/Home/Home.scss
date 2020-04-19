@@ -9,15 +9,12 @@
 	right: 0;
 	bottom: 0;
 	animation: APP-Background-color infinite 18s linear alternate;
-
     .App-info{
         margin: 0 auto;
     }
-    
     .App-React {
         text-align: center;
     }
-    
     .App-Home-logo {
         position: relative;
         width: $reactLogoSize;
@@ -53,13 +50,11 @@
         width: 100%;
         text-align: center;
     }
-    
     @media (prefers-reduced-motion: no-preference) {
         .App-logo-react {
             animation: App-logo-spin infinite 20s linear;
         }
     }
-    
     @keyframes App-logo-spin {
         from {
             transform: rotate(0deg);
@@ -68,7 +63,6 @@
             transform: rotate(360deg);
         }
     }
-
 	@keyframes APP-Background-color {
 		0% {
 			background-color: #9c27b0;

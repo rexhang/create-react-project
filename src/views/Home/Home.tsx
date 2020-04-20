@@ -18,7 +18,7 @@ export class Home extends React.Component<any, any>{
             <div className="App-Home">
                 <Result
                     icon={<SmileOutlined />}
-                    title="欢迎使用本系统~"
+                    title={<span style={{color: '#fff'}}>欢迎使用本系统~</span>}
                     subTitle="Please go to the control panel for more features."
                     extra={
                         <Button type="primary" key="console">
